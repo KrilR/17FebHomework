@@ -1,48 +1,132 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>HomeWork</title>
     <link rel="stylesheet" type="text/css" href="mystyles.css" media="screen" />
 </head>
+
 <body>
     <header>
-  <h1></h1>
-  <nav>
-    <ul >
-      <li ><a href="index.html">Table</a>
-      <li><a href="List.html">Lists</a>
-      <li><a href="Form.html">Form</a>
-    </ul>
-  </nav>
-  <Div class="MyTitle">Home work 2017-02-07</div>
+        <h1></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Table</a>
+                    <li><a href="List.html">Lists</a>
+                        <li><a href="Form.html">Form</a>
+            </ul>
+        </nav>
+        <Div class="MyTitle">Home work 2017-02-07</div>
     </header>
     <h3 style="text-align: center">FORM</h3>
     <hr>
-    <section style="margin-right:15%; margin-left:15%">
-    <form action="https://formspree.io/roksolana.kr@gmail.com"
-      method="POST">
-        
-        <label> Name
-        <br>
-            <input type="Name" name="Name" value="Roksolana Kril">
-        </label> 
-        <br>
-        
-        <label> Email
-        <br>
-             <input type="email" name="replyto" value="roksolana.kr@gmail.com">
-        </label>
-        <br>
-        
-        
-    
-    <input type="submit" value="Send">
-    </form>
+    <section style="margin-right:30%; margin-left:30%">
+
+        <form oninput="x.value=parseInt(a.value)"action="https://formspree.io/roksolana.kr@gmail.com" method="POST">
+            <fieldset>
+                <legend>Personal information:</legend>
+                <label> Name
+                    <br>
+                    <input type="Name" name="Name" size="30" required pattern="^[A-Za-z]{5,30}">
+                </label>
+                <br>
+                <br>
+
+                <label> Email
+                    <br>
+                    <input type="<strong>email</strong>" name="replyto" size="30" required pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+                </label>
+                <br>
+                <br>
+
+                <label> Sex
+                    <br>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio" name="gender" value="other" checked> Other
+                </label>
+                <br>
+                <br>
+                <label> Country code
+                    <br>
+                    <select name="CC" required>
+                        <option value="380">+380</option>
+                        <option value="54">+54</option>
+                        <option value="48">+48</option>
+                        <option value="36">+36</option>
+                    </select>
+                </label>
+                <br>
+                <label> Phone
+                    <br>
+                    <input type="Phone" name="Phone" size="30"required pattern="^[0-9]{7,11}">
+                </label>
+                <br>
+                <br>
+                <label> Age
+                    <Br>
+                  0
+                  <input type="range" id="a" value="50" required>100
+                  <Br>
+                  <output name="x" for="a"></output>
+                   years old
+                </label>
+                <br>
+                <br>
+                <label> Country
+                    <br>
+                    <input list="Country" name="Country" size="30"/>
+                    <datalist id="Country">
+                        <option value="Ukraine">
+                        <option value="Poland">
+                        <option value="Austria">
+                        <option value="Hungary">
+                        <option value="Moldova">
+                        <option value="Romania">
+                        <option value="Slovakia">
+                        <option value="Other">
+                    </datalist>
+                </label>
+                <br>
+                <Br>
+                  <label >What do you prepare?
+                      <br>
+                      <select name="Taste">
+                      <optgroup label="Coffe">
+                        <option name="taste" value="Americano"> Americano<br>
+                        <option name="taste" value="Late"> Late<br>
+                        <option name="taste" value="Cappuccino"> Cappuccino<br>
+                        <option name="taste" value="Espresso"> Espresso<br>
+                        <option name="taste" value="Other coffe"> Other<br>
+                      </optgroup>
+                      <optgroup label="Tea">
+                        <option value="Black tea"> Black<br>
+                        <option value="White tea"> White<br>
+                        <option value="Green tea"> Green<br>
+                        <option value="Fruit tea"> Fruit<br>
+                        <option value="Other tea"> Other<br>
+                      </optgroup>
+                      <optgroup label="Alcohol" disabled>
+                        <option value="Whiskey"> Whiskey<br>
+                        <option value="Champagne"> Champagne<br>
+                        <option value="Beer"> Beer<br>
+                      </optgroup>
+                      <optgroup label="Other">
+                        <option value="Water"> Just water<br>
+                      </optgroup>
+                      </select>
+                  </label>
+
+            </fieldset>
+
+            <input type="submit" value="Send">
+        </form>
     </section>
 
     <footer>
-      <h4>This is footer</h4>
+        <h4>This is footer</h4>
     </footer>
 </body>
+
 </html>
